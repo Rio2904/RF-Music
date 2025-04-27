@@ -2,13 +2,14 @@
       padding: 0;
       margin: 0;
     }
+
     body {
       background-color: #121212;
       color: white;
-      font-family:  'Sans-Serif';
+      font-family: 'Sans-Serif';
       padding-bottom: 150px;
     }
-    
+
     /* Navbar */
     .navbar {
       margin-top: 2rem;
@@ -16,43 +17,52 @@
       align-items: center;
       justify-content: space-between;
     }
+
     .navbar .news {
       margin-left: 15px;
     }
+
     .navbar .icon {
       width: 30%;
       display: flex;
       justify-content: space-evenly;
       margin-right: 20px;
     }
+
     .navbar .icon img {
       width: 100%;
     }
+
     .navbar .icon div {
       width: 30px;
     }
+
     .navbar .icon .api {
       text-align: center;
       display: flex;
       align-items: center;
     }
+
     .navbar .icon .api a {
       color: white;
       font-weight: bold;
     }
+
     .title-box {
       border-left: 5px solid #3AA3FF;
       padding-left: 8px;
     }
+
     /* End Navbar */
-    
-    /* Search song*/ 
+
+    /* Search song*/
     .container-search {
       margin: 50px 0;
       display: flex;
       justify-content: center;
       gap: 5px;
     }
+
     #search {
       padding: 10px;
       outline: none;
@@ -61,9 +71,11 @@
       background-color: #121212;
       color: white;
     }
+
     #search:focus {
       border: 1px solid #8b3f3f;
     }
+
     #searchBtn {
       background-color: #2b2b2b;
       border: 1px solid #6d6d6d;
@@ -72,10 +84,10 @@
       color: white;
       font-weight: bold;
     }
-     
-     
-     /* Box Song */
-     .container-box-song {
+
+
+    /* Box Song */
+    .container-box-song {
       margin-top: 2rem;
       display: flex;
       gap: 15px;
@@ -84,7 +96,11 @@
       padding-right: 15px;
       overflow: auto;
     }
-    .container-box-song::-webkit-scrollbar { display: none; }
+
+    .container-box-song::-webkit-scrollbar {
+      display: none;
+    }
+
     .container-box-song .box {
       flex: 1;
       min-width: 160px;
@@ -94,45 +110,51 @@
       color: #a7a7a7;
       text-align: center;
     }
-    .container-box-song .box:hover .thumb, .box:hover .judul {
+
+    .container-box-song .box:hover .thumb,
+    .box:hover .judul {
       transform: scale(1.02);
     }
-    .container-box-song .box .thumb img{
+
+    .container-box-song .box .thumb img {
       width: 100%;
       height: 100%;
     }
+
     .container-box-song .box .thumb {
       height: 160px;
       border-radius: 10px;
       overflow: hidden;
     }
+
     .container-box-song .box .judul {
       margin-top: 10px;
       font-weight: bold;
     }
+
     /* End box Song */
 
-    
+
     /* Audio Player */
     .container-audio-player {
       position: fixed;
       width: 50%;
       bottom: 10px;
       padding-bottom: 30px;
-      background-color: rgba(18,18,18, 0.5);
+      background-color: rgba(18, 18, 18, 0.5);
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
     .audio-player {
-        margin: 0 auto;
-        display: flex;
-        margin-top: 2rem;
-        width: 90%;
-        background-color: #3C3837;
-        border-radius: 10px;
-      }
+      margin: 0 auto;
+      display: flex;
+      margin-top: 2rem;
+      width: 90%;
+      background-color: #3C3837;
+      border-radius: 10px;
+    }
 
     .detail {
       display: flex;
@@ -144,20 +166,26 @@
       overflow: scroll;
     }
 
+    .detail::-webkit-scrollbar {
+      display: none;
+    }
+
     .detail img {
       width: 55px;
       border-radius: 5px;
     }
-  
+
     .detail .title .judulAP {
       font-weight: bold;
-      white-space: nowrap; 
-      overflow: hidden; 
+      white-space: nowrap;
+      overflow: hidden;
       text-overflow: ellipsis;
     }
+
     .detail .title .artisAP {
       color: #ddd;
     }
+
     .control {
       flex: 1.5;
       display: flex;
@@ -165,201 +193,227 @@
       align-items: center;
       margin-right: 10px;
     }
+
     .control img {
       width: 35px;
       height: 35px;
     }
-   .title-song-audio {
-     text-align: center;
-   }
-   
-   
-   .time {
-     width: 90%;
-     display: flex;
-     justify-content: space-between;
-     font-size: 13px;
-   }
-   input#seekslider{
-    -webkit-appearance: none;
-     height: 5px;
-     border-radius: 2px;
-     width: 90%;
-     margin-top: 5px;
-   }
-   .title-box {
-     margin-top: 2rem;
-     margin-left: 15px;
-   }
-   
-   /* End Audio Player */
-   
-   .loader {
-    margin: auto;
-    width: 48px;
-    height: 48px;
-    border: 5px solid #FFF;
-    border-bottom-color: #FF3D00;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
-}
 
-@keyframes rotation {
-    0% {
-        transform: rotate(0deg);
+    .title-song-audio {
+      text-align: center;
     }
 
-    100% {
-        transform: rotate(360deg);
-    }
 
-}
-   
-   
-   @media (min-width: 481px)  { /* CSS */ 
-    .container-audio-player {
-     transform: translate(50%);
-    }
-   }
-   
-   
-   
-   @media (min-width: 320px) and (max-width: 480px) { 
-  /* Navbar */
-    .navbar {
-      margin-top: 2rem;
-      margin-bottom: 2rem;
+    .time {
+      width: 90%;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      font-size: 13px;
     }
-    .navbar .news {
+
+    input#seekslider {
+      -webkit-appearance: none;
+      height: 5px;
+      border-radius: 2px;
+      width: 90%;
+      margin-top: 5px;
+    }
+
+    .title-box {
+      margin-top: 2rem;
       margin-left: 15px;
     }
-    .navbar .icon {
-      width: 30%;
-      display: flex;
-      justify-content: space-evenly;
-      margin-right: 20px;
-    }
-    .navbar .icon img {
-      width: 100%;
-    }
-    .navbar .icon div {
-      width: 30px;
-    }
-    .navbar .icon .api {
-      text-align: center;
-      display: flex;
-      align-items: center;
-    }
-    .navbar .icon .api a {
-      color: white;
-      font-weight: bold;
-    }
- /* End Navbar */
-     
-   
-  /*Box Song  */
-     .container-box-song {
-      margin-top: 1rem;
-      display: flex;
-      gap: 15px;
-      justify-content: start;
-      padding-left: 15px;
-      padding-right: 15px;
-      overflow: auto;
-    }
-    .container-box-song::-webkit-scrollbar { display: none; }
-    .container-box-song .box {
-      flex: 1;
-      min-width: 160px;
-      max-width: 160px;
-      font-family: Sans-Serif;
-      font-size: 0.8rem;
-      color: #a7a7a7;
-      text-align: center;
-    }
-    
-    .container-box-song .box:hover .thumb, .box:hover .judul {
-      transform: scale(1.02);
-    }
-    .container-box-song .box .thumb img{
-      width: 100%;
-      height: 100%;
-    }
-    .container-box-song .box .thumb {
-      height: 160px;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .container-box-song .box .judul {
-      margin-top: 10px;
-    }
-    
-  /* mini */
-     .container-box-song.mini {
-       display: flex;
-       flex-direction: column;
-     }
-     
-     .container-box-song .box.mini {
-      max-width: 95%; 
-      /* border: 2px solid red; */
-      background-color: #242424;
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      gap: 15px;
-    }
-    .container-box-song .box.mini .thumb.mini {
-      width: 60px;
-      height: 60px;
-      border-radius: 0;
-    }
-    .container-box-song .box.mini .thumb.mini img {
-      border-radius: 0;
-    }
-    .container-box-song .box.mini .text.mini {
-      width: 70%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      /* border: 1px solid white; */
-      text-align: start;
-      height: 100%;
-      align-items: start;
-      overflow: scroll;
-    }
-    .container-box-song .box.mini .judul.mini {
-      margin-top: 0;
-      font-size: 17px;
-      white-space: nowrap;
-      overflow: hidden; 
-      text-overflow: ellipsis;
-    }
-    
-  /* End Box Song */
-   
-   
-   
-   
-   
-  /* Audio Player Control */  
-     .container-audio-player {
-      position: fixed;
-      width: 100%;
-      bottom: 10px;
-      padding-bottom: 30px;
-      background-color: rgba(18,18,18, 0.5);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+
+    /* End Audio Player */
+
+    .loader {
+      margin: auto;
+      width: 48px;
+      height: 48px;
+      border: 5px solid #FFF;
+      border-bottom-color: #FF3D00;
+      border-radius: 50%;
+      display: inline-block;
+      box-sizing: border-box;
+      animation: rotation 1s linear infinite;
     }
 
-    .audio-player {
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+
+    }
+
+
+    @media (min-width: 481px) {
+
+      /* CSS */
+      .container-audio-player {
+        transform: translate(50%);
+      }
+    }
+
+
+
+    @media (min-width: 320px) and (max-width: 480px) {
+
+      /* Navbar */
+      .navbar {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .navbar .news {
+        margin-left: 15px;
+      }
+
+      .navbar .icon {
+        width: 30%;
+        display: flex;
+        justify-content: space-evenly;
+        margin-right: 20px;
+      }
+
+      .navbar .icon img {
+        width: 100%;
+      }
+
+      .navbar .icon div {
+        width: 30px;
+      }
+
+      .navbar .icon .api {
+        text-align: center;
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar .icon .api a {
+        color: white;
+        font-weight: bold;
+      }
+
+      /* End Navbar */
+
+
+      /*Box Song  */
+      .container-box-song {
+        margin-top: 1rem;
+        display: flex;
+        gap: 15px;
+        justify-content: start;
+        padding-left: 15px;
+        padding-right: 15px;
+        overflow: auto;
+      }
+
+      .container-box-song::-webkit-scrollbar {
+        display: none;
+      }
+
+      .container-box-song .box {
+        flex: 1;
+        min-width: 160px;
+        max-width: 160px;
+        font-family: Sans-Serif;
+        font-size: 0.8rem;
+        color: #a7a7a7;
+        text-align: center;
+      }
+
+      .container-box-song .box:hover .thumb,
+      .box:hover .judul {
+        transform: scale(1.02);
+      }
+
+      .container-box-song .box .thumb img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .container-box-song .box .thumb {
+        height: 160px;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .container-box-song .box .judul {
+        margin-top: 10px;
+      }
+
+      /* mini */
+      .container-box-song.mini {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container-box-song .box.mini {
+        max-width: 95%;
+        /* border: 2px solid red; */
+        background-color: #242424;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .container-box-song .box.mini .thumb.mini {
+        width: 60px;
+        height: 60px;
+        border-radius: 0;
+      }
+
+      .container-box-song .box.mini .thumb.mini img {
+        border-radius: 0;
+      }
+
+      .container-box-song .box.mini .text.mini {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        /* border: 1px solid white; */
+        text-align: start;
+        height: 100%;
+        align-items: start;
+        overflow: scroll;
+      }
+
+      .container-box-song .box.mini .judul.mini {
+        margin-top: 0;
+        font-size: 17px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      /* End Box Song */
+
+
+
+
+
+      /* Audio Player Control */
+      .container-audio-player {
+        position: fixed;
+        width: 100%;
+        bottom: 10px;
+        padding-bottom: 30px;
+        background-color: rgba(18, 18, 18, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .audio-player {
         margin: 0 auto;
         display: flex;
         margin-top: 2rem;
@@ -368,63 +422,68 @@
         border-radius: 10px;
       }
 
-    .detail {
-      display: flex;
-      flex: 2;
-      gap: 10px;
-      align-items: center;
-      padding: 10px;
-      color: white;
+      .detail {
+        display: flex;
+        flex: 2;
+        gap: 10px;
+        align-items: center;
+        padding: 10px;
+        color: white;
+      }
+
+      .detail img {
+        width: 55px;
+        border-radius: 5px;
+      }
+
+      .detail .title .judulAP {
+        font-weight: bold;
+      }
+
+      .detail .title .artisAP {
+        color: #ddd;
+      }
+
+      .control {
+        flex: 1.5;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 10px;
+      }
+
+      .control img {
+        width: 35px;
+        height: 35px;
+      }
+
+      .title-song-audio {
+        text-align: center;
+      }
+
+      .time {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+      }
+
+      input#seekslider {
+        /* -webkit-appearance: none; */
+        height: 5px;
+        border-radius: 2px;
+        width: 90%;
+        margin-top: 5px;
+      }
+
+      /* End Audio Player Control */
+      .title-box {
+        margin-top: 2rem;
+        margin-left: 15px;
+      }
+
     }
 
-    .detail img {
-      width: 55px;
-      border-radius: 5px;
+    header {
+      background-color: red;
     }
-  
-    .detail .title .judulAP {
-      font-weight: bold;
-    }
-    .detail .title .artisAP {
-      color: #ddd;
-    }
-    .control {
-      flex: 1.5;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-right: 10px;
-    }
-    .control img {
-      width: 35px;
-      height: 35px;
-    }
-   .title-song-audio {
-     text-align: center;
-   }
-   
-   .time {
-     width: 90%;
-     display: flex;
-     justify-content: space-between;
-     font-size: 13px;
-   }
-   input#seekslider{
-    /* -webkit-appearance: none; */
-     height: 5px;
-     border-radius: 2px;
-     width: 90%;
-     margin-top: 5px;
-   }
-   
-   /* End Audio Player Control */
-   .title-box {
-     margin-top: 2rem;
-     margin-left: 15px;
-   }
-   
-}
-
-header {
-  background-color: red;
-}

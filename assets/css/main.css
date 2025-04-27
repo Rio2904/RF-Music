@@ -322,6 +322,10 @@ input[type="range"]:active::-ms-thumb {
     overflow: scroll;
 }
 
+.lyrics-main.active::-webkit-scrollbar {
+    display: none;
+}
+
 @media (min-width: 681px) {
 
     /* CSS */
