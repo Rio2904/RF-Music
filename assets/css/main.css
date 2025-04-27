@@ -1,0 +1,333 @@
+body {
+    background-color: #121212;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+.player-container-main {
+    display: none;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* Lebar viewport */
+    height: 100vh;
+    /* Tinggi viewport */
+    /* margin: 0 auto; */
+    /* top: 50%;
+    left: 50%;  */
+    /* transform: translate(-50%, -50%); */
+    z-index: 999;
+    /* border: 2px solid red; */
+    overflow: scroll;
+}
+
+.player-main {
+    /* display: block; */
+    /* position: sticky; */
+    margin: 50px auto;
+    padding: 1.875rem 0;
+    /* 30px */
+    background-color: #1a1a1a;
+    /* height: 40rem; */
+    /* 640px */
+    width: 90%;
+    /* 360px */
+    border-radius: 1.25rem;
+    /* 20px */
+    overflow: hidden;
+    /* border: 1px solid green; */
+}
+
+.top-controls-main {
+    margin: 0 1.875rem;
+    /* 30px */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-controls-main div {
+    margin: 0;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.album-cover-main {
+    margin: 1.75rem auto;
+    /* 28px */
+    width: 15rem;
+    /* 240px */
+    height: 15rem;
+    /* 240px */
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    user-select: none;
+}
+
+.album-cover-main img {
+    width: 15rem;
+    /* 240px */
+    height: 15rem;
+    /* 240px */
+    border-radius: 100%;
+    /* animation: playRotate 6s infinite forwards linear; */
+}
+
+.song-info-main {
+    /* border: 1px solid red; */
+    text-align: center;
+    /* margin: 2.25rem auto 1.75rem auto; */
+    /* 36px 28px*/
+}
+
+.song-info-main .title-main {
+    /* max-width: 18.75rem; */
+    /* 300px */
+    color: white;
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+.song-info-main .artist-main {
+    /* max-width: 18.75rem; */
+    /* 300px */
+    color: #bebebe;
+    font-size: 1em;
+}
+
+.song-timeline-main {
+    margin: 2.25rem auto 2.25rem auto;
+    /* 36px */
+    max-width: 18.75rem;
+    /* 300px */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    --seek-before-width: 0%;
+    --buffered-width: 0%;
+}
+
+.song-timeline-main div {
+    margin: 0 auto;
+    padding: 5px;
+}
+
+input[type="range"] {
+    position: relative;
+    -webkit-appearance: none;
+    outline: none;
+    width: 60%;
+    height: 3px;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* on Chrome browser */
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background-color: #8087829a;
+}
+
+input[type="range"]::before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    top: 8px;
+    left: 0;
+    width: var(--seek-before-width);
+    background-color: #cc7e859a;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    position: relative;
+    -webkit-appearance: none;
+    box-sizing: content-box;
+    margin: -6.5px 0 0 0;
+    border: 1px solid #cc7e85;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #cc7e85;
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+    transform: scale(1.2);
+    background: #cc7e85;
+}
+
+/* on Mozilla Firefox browser */
+
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background: #8087829a;
+}
+
+input[type="range"]::-moz-range-progress {
+    background-color: #cc7e859a;
+}
+
+input[type="range"]::-moz-focus-outer {
+    border: 0;
+}
+
+input[type="range"]::-moz-range-thumb {
+    box-sizing: content-box;
+    margin: -6.5px 0 0 0;
+    border: 1px solid #cc7e85;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #cc7e85;
+}
+
+input[type="range"]:active::-moz-range-thumb {
+    transform: scale(1.2);
+    background: #cc7e85;
+}
+
+input[type="range"]::-ms-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background: transparent;
+    border: solid transparent;
+    color: transparent;
+}
+
+/* on Internet Explorer browser */
+
+input[type="range"]::-ms-fill-lower {
+    background-color: #8087829a;
+}
+
+input[type="range"]::-ms-fill-upper {
+    background-color: #cc7e859a;
+}
+
+input[type="range"]::-ms-thumb {
+    box-sizing: content-box;
+    border: 1px solid #cc7e85;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #cc7e85;
+    cursor: pointer;
+}
+
+input[type="range"]:active::-ms-thumb {
+    transform: scale(1.2);
+    background: #cc7e85;
+}
+
+.time-stamp {
+    color: #ffffff;
+    font-size: 0.75em;
+}
+
+.bottom-controls-main {
+    margin: 1.75rem auto 0 auto;
+    /* 28px */
+    max-width: 18.75rem;
+    /* 300px */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom-controls-main div {
+    margin: 0;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.play-pause-main {
+    display: none;
+}
+
+.play-pause {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.active svg path {
+    fill: #cc7e85;
+}
+
+.player-container-main.active {
+    display: block;
+}
+
+@-webkit-keyframes playRotate {
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+}
+
+@keyframes playRotate {
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+}
+
+.lyrics-toggle {
+    border: none;
+    background-color: #cc7e85;
+    color: white;
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+
+.lyrics-main {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.lyrics-main.active {
+    margin: 50px auto;
+    width: 95%;
+    padding: 10px 5px;
+    border: 1px solid #636363;
+    border-radius: 5px;
+    min-height: 500px;
+    text-align: center;
+    overflow: scroll;
+}
+
+@media (min-width: 681px) {
+
+    /* CSS */
+    .player-main {
+
+        width: 50%;
+    }
+
+}
