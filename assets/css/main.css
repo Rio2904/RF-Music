@@ -28,6 +28,10 @@ a {
     overflow: scroll;
 }
 
+.player-container-main::-webkit-scrollbar {
+    display: none;
+}
+
 .player-main {
     /* display: block; */
     /* position: sticky; */
