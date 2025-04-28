@@ -127,7 +127,6 @@ async function getSongsSearch(search) {
 }
 // dislplay search songs
 function displaySearchSongs(data) {
-  // Literal
   let box = ``;
   data.forEach(function (e, i) {
     box += `<div class="box mini" data-url="${e.downloadUrl[3].url}" data-id="${e.id}" >
@@ -137,7 +136,6 @@ function displaySearchSongs(data) {
           <p class="artis mini">${e.artists.primary[0].name}</p>
         </div>
       </div>`;
-    // push box song
   })
   let container = document.querySelectorAll('.container-box-song');
   container[0].innerHTML = box;
@@ -152,7 +150,6 @@ async function getRecomendedSong(artist, section) {
     const response = await fetch(url);
     const result = await response.json();
     let data = result.data.results;
-    console.log(data)
     displayRecomendedSongs(data, section);
 
     // get all element box audio when asycn done
@@ -265,12 +262,18 @@ function handleBoxClicked(index, boxAudio) {
 
   function handleNextSong() {
     index = index < boxAudio.length - 1 ? index += 1 : index = 0;
-    nextAudio(index, boxAudio);
+    audio.pause();
+    playCurrentAudio(index, boxAudio);
   }
 
   function handlePrevSong() {
-    index = index > 0 ? index -= 1 : index = boxAudio.length - 1;
-    prevAudio(index, boxAudio);
+    if (audio.currentTime > 3) {
+      audio.currentTime = 0;
+    } else {
+      index = index > 0 ? index -= 1 : index = boxAudio.length - 1;
+      audio.pause();
+      playCurrentAudio(index, boxAudio);
+    }
   }
 
 }
@@ -296,22 +299,6 @@ function playCurrentAudio(index, boxAudio) {
 
   });
 
-}
-
-
-// pilih lagu sebelumnya
-function prevAudio(index, boxAudio) {
-  //let currentAudioSrc = boxAudio[index].getAttribute("data-url");
-  audio.pause();
-  playCurrentAudio(index, boxAudio);
-}
-
-
-// pilih lagu setelahnya
-function nextAudio(index, boxAudio) {
-  //let currentAudioSrc = boxAudio[index].getAttribute("data-url");
-  audio.pause();
-  playCurrentAudio(index, boxAudio);
 }
 
 
